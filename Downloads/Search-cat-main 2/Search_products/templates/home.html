@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品搜索</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='home_style.css') }}"
+    />
+  </head>
+  <body>
+    <form action="/search" method="post">
+      <input
+        type="search"
+        name="keyword"
+        placeholder="請輸入關鍵字..."
+        required
+      />
+      <i class="fas fa-search"></i>
+    </form>
+  </body>
+</html>

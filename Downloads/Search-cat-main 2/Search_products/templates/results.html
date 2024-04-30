@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>搜索結果</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='results_style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>搜索結果</h1>
+    {% if products %}
+    <ul>
+      {% for product in products %}
+      <li>
+        {{ product['category'] }} -
+        <a href="{{ product['url'] }}">{{ product['name'] }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>未找到相關商品，請嘗試其他關鍵字。</p>
+    {% endif %}
+    <a href="/">返回搜索頁</a>
+  </body>
+</html>
